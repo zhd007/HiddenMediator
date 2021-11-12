@@ -30,12 +30,8 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/trend/n50000.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n50000.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
 
 ## for table
 table1 <- summary_table(record1, record2, record3, c("n=50000_SNP70_0.02", "n=50000_SNP70_0.25", "n=50000_SNP70_0.5"))
@@ -74,11 +70,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/trend/n50000.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n50000.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n50000.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
@@ -113,12 +110,8 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/trend/n25000.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n25000.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
 
 ## for table
 table3 <- summary_table(record1, record2, record3, c("n=25000_SNP70_0.02", "n=25000_SNP70_0.25", "n=25000_SNP70_0.5"))
@@ -157,11 +150,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/trend/n25000.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n25000.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting3/summary.n25000.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
