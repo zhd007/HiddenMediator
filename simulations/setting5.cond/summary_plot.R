@@ -30,12 +30,9 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.3-m2.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
+
 
 ## for table
 table1 <- summary_table(record1, record2, record3, c("cond_m1-0.3-m2_SNP70_0.02", "cond_m1-0.3-m2_SNP70_0.25", "cond_m1-0.3-m2_SNP70_0.5"))
@@ -69,11 +66,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.3-m2.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
@@ -108,12 +106,9 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.9-m2.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.9-m2.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
+
 
 ## for table
 table3 <- summary_table(record1, record2, record3, c("cond_m1-0.9-m2_SNP70_0.02", "cond_m1-0.9-m2_SNP70_0.25", "cond_m1-0.9-m2_SNP70_0.5"))
@@ -147,11 +142,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.9-m2.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.9-m2.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.9-m2.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
@@ -188,12 +184,8 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.3-m2.m3-0.2-m4.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.m3-0.2-m4.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
 
 ## for table
 table5 <- summary_table(record1, record2, record3, c("cond_m1-0.3-m2_m3-0.2-m4_SNP70_0.02", "cond_m1-0.3-m2_m3-0.2-m4_SNP70_0.25", "cond_m1-0.3-m2_m3-0.2-m4_SNP70_0.5"))
@@ -227,11 +219,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.3-m2.m3-0.2-m4.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.m3-0.2-m4.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.3-m2.m3-0.2-m4.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
@@ -268,12 +261,9 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.5-m2.m3-0.4-m4.snp70.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.5-m2.m3-0.4-m4.snp70.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot1 <- draw_plot_70(record1, record2, record3, in_path)
 
-## output
-pdf(out_path, width=25, height=5)
-cplot 
-dev.off()
+
 
 ## for table
 table7 <- summary_table(record1, record2, record3, c("cond_m1-0.5-m2_m3-0.4-m4_SNP70_0.02", "cond_m1-0.5-m2_m3-0.4-m4_SNP70_0.25", "cond_m1-0.5-m2_m3-0.4-m4_SNP70_0.5"))
@@ -307,11 +297,12 @@ dim(record) == c(3000, 21)
 
 in_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/trend/m1-0.5-m2.m3-0.4-m4.snp500.record.csv"
 out_path <- "/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.5-m2.m3-0.4-m4.snp500.pdf"
-cplot <- draw_plot_no_embed(record1, record2, record3, in_path)
+cplot2 <- draw_plot_500(record1, record2, record3, in_path)
 
 ## output
-pdf(out_path, width=25, height=5)
-cplot 
+pdf("/Users/dr/Desktop/mediation_summary/cluster_simulations.updated/setting5.cond/summary.m1-0.5-m2.m3-0.4-m4.pdf", width=12, height=6)
+ggarrange(cplot1, cplot2,
+          ncol = 1, nrow = 2)
 dev.off()
 
 ## for table
