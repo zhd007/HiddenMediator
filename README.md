@@ -1,3 +1,3 @@
 # HiddenMediator
 
-Scripts for conducting the simulations under the eight settings and plotting the results.
+Contains the HiddenMediator R package and simulation scripts.
