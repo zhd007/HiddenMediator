@@ -95,5 +95,29 @@ y <- known_beta[1] * m1 + known_beta[2] * m2 + known_beta[3] * m3 +
   rnorm(sample_size, mean = 0, sd = 0.2)
 ```
 
+Before we call the function to estimate the hidden mediator's effect size, we put
 
+```
+## put together with the SNPs
+df.snp$m1 <- m1
+df.snp$m2 <- m2
+df.snp$m3 <- m3
+df.snp$m4 <- m4
+df.snp$y <- y
+df.snp$covariate1 <- covariate1
+df.snp$covariate2 <- covariate2
+
+## 70 SNPs
+outcome <- df.snp$y
+snps <- as.matrix(df.snp[,1:70])
+mediators <- as.matrix(df.snp[,71:73])
+covariates <- as.matrix(df.snp[76:77])
+```
+
+Finally, we call the estimateHM function to estimate the hidden mediator's effect size.
+
+```
+result <- estimateHM(outcome, snps, mediators, covariates, em_iter = 15, c = 10000, burn = 1000, remove_outliers = FALSE)
+result
+```
 
