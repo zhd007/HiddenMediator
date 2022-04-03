@@ -9,12 +9,13 @@ install.packages("/local_path/HiddenMediator_0.1.0.tar.gz", repos = NULL, type =
 ```
 
 
-Below, we will use an example with three know mediators and one hidden mediator to illustrate how to call the main function of the package. We will start by simulating the data under the true model.
+Below, we will use an example with three know mediators and one hidden mediator to illustrate how to call the main function of the package. The hidden mediator's true effect size is 0.3. We will start by simulating the data under the true model. 
 
 
 
 ```
 ## an simple example with three know mediators and one hidden mediator
+library(HiddenMediator)
 set.seed(1000)
 true_hidden <- 0.3                # the true effect size of the hidden mediator
 num_snp <-   70                   # number of snp in the model
@@ -85,6 +86,14 @@ covariate1 <- rnorm(sample_size, mean = 7, sd = 0.5)
 covariate2 <- rnorm(sample_size, mean = 4, sd = 0.4)
 ```
 
+Next, we generate the outcome trait based on the true effects.
+
+```
+############## outcome
+y <- known_beta[1] * m1 + known_beta[2] * m2 + known_beta[3] * m3 +
+  true_hidden * m4 + 0.8 * covariate1 - 0.3 * covariate2 +
+  rnorm(sample_size, mean = 0, sd = 0.2)
+```
 
 
 
