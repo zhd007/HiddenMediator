@@ -6,4 +6,4 @@ Each folder contains the R scripts for one of the simulation settings. In Settin
 
 
 
-Under the folder of each setting, summary_plot.R generates Figure 3, S2-20, and the contents of Table S1, S2.
+Under the folder of each setting, summary_plot.R generates Figure 3, S2-21, and the contents of Table S1, S2.
