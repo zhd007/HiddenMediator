@@ -8,7 +8,7 @@ An R package for estimating the effect size of a potential hidden mediator betwe
 To install the package, download HiddenMediator\_0.1.0.tar.gz and run the following command in R:
 
 ``` r
-install.packages("/Users/dr/Desktop/mediation_package/HiddenMediator_0.1.0.tar.gz", repos = NULL, type = "source")
+install.packages("/<local_path>/HiddenMediator_0.1.0.tar.gz", repos = NULL, type = "source")
 ```
 
 <br/>
